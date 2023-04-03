@@ -1,0 +1,137 @@
+/* -------------------- */
+/*        RESET         */
+/* -------------------- */
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* -------------------- */
+/*     VARIABLES        */
+/* -------------------- */
+:root {
+  --clr-primary-light-cyan: hsl(193, 38%, 86%);
+  --clr-primary-neon-green: hsl(150, 100%, 66%);
+  --clr-primary-neon-hsl: 150, 100%, 66%;
+
+  --clr-neutral-grayish-blue: hsl(217, 19%, 38%);
+  --clr-neutral-dark-grayish-blue: hsl(217, 19%, 24%);
+  --clr-neutral-dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.75rem;
+  background-color: var(--clr-neutral-dark-blue);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.advice-card {
+  background-color: var(--clr-neutral-dark-grayish-blue);
+  color: var(--clr-primary-light-cyan);
+  max-width: 540px;
+  padding: 3.125rem;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  &__text {
+    text-align: center;
+
+    &--title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--clr-primary-neon-green);
+      margin-bottom: 1.8rem;
+    }
+
+    &--quote {
+      margin-bottom: 1.8rem;
+      max-width: 450px;
+    }
+  }
+
+  &__divider {
+    margin-bottom: 2rem;
+  }
+
+  &__dice {
+    background-color: var(--clr-primary-neon-green);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+      //   box-shadow: hsla(var(--clr-primary-neon-hsl), 0.25) 0px 54px 55px,
+      //     hsla(var(--clr-primary-neon-hsl), 0.12) 0px -12px 30px,
+      //     hsla(var(--clr-primary-neon-hsl), 0.12) 0px 4px 6px,
+      //     hsla(var(--clr-primary-neon-hsl), 0.17) 0px 12px 13px,
+      //     hsla(var(--clr-primary-neon-hsl), 0.09) 0px -3px 5px;
+
+      box-shadow: 0px 0px 50px 0px hsla(var(--clr-primary-neon-hsl), 0.8);
+    }
+  }
+}
