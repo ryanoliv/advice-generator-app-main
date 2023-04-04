@@ -74,6 +74,12 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  padding-inline: 1rem;
+}
+@media (max-width: 500px) {
+  body {
+    font-size: 1.4rem;
+  }
 }
 
 .advice-card {
@@ -85,6 +91,11 @@ body {
   display: grid;
   place-items: center;
   position: relative;
+}
+@media (max-width: 500px) {
+  .advice-card {
+    padding: 2.5rem 2rem;
+  }
 }
 .advice-card__text {
   text-align: center;
@@ -99,6 +110,11 @@ body {
 .advice-card__text--quote {
   margin-bottom: 1.8rem;
   max-width: 450px;
+}
+@media (max-width: 500px) {
+  .advice-card__text--quote {
+    max-width: 295px;
+  }
 }
 .advice-card__divider {
   margin-bottom: 2rem;
